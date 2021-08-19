@@ -11,7 +11,7 @@ title:            Veysi ADIN
 tagline:          'Know thyself'
 description:      'Master Student - Junior Embedded Systems Engineer'
 url:              http://hyde.getpoole.com
-baseurl:          https://veysiadn.github.io/about-me/
+baseurl:          https://veysiadn.github.io/
 
 author:
   name:           'Mark Otto'
@@ -23,6 +23,6 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/veysiadn/about-me
+  repo:           https://github.com/veysiadn/veysiadn.github.io/
 
 theme: jekyll-theme-cayman
