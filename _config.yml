@@ -8,8 +8,8 @@ relative_permalinks: false
 
 # Setup
 title:            Veysi ADIN
-tagline:          'test'
-description:      'A brazen two-column <a href="http://jekyllrb.com" target="_blank">Jekyll</a> theme that pairs a prominent sidebar with uncomplicated content. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
+tagline:          'Know thyself'
+description:      'Master Student - Junior Embedded Systems Engineer'
 url:              http://hyde.getpoole.com
 baseurl:          https://veysiadn.github.io/about-me/
 
