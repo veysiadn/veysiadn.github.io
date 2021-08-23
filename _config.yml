@@ -7,7 +7,7 @@ permalink:        pretty
 relative_permalinks: false
 
 # Setup
-title:            Veysi ADIN
+title:            Veysi ADIN ![placeholder](http://placehold.it/400x200 "Medium example image")
 tagline:          'Know thyself'
 description:      'Master Student - Junior Embedded Systems Engineer'
 url:              http://hyde.getpoole.com
