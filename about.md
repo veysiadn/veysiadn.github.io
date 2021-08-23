@@ -4,9 +4,12 @@ title: About
 ---
 
 <p class="message">
-  HTest
+  **
 </p>
 
+Hi there, 
+I'm Veysi ADIN, I studied Electrical & Electronics Engineering in Mersin, Turkey.
+Currently I'm a master student at University of Science and Technology (UST) in 3rd semester, and I'm working at Korea Institute of Science and Technology (KIST) campus as a research assistant. My main focus is on medical robotics software, safety and fieldbus protocols. I enjoy electronics, DIY projects and learning new things everyday.
 In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
 
 There are currently two themes built on Poole:
