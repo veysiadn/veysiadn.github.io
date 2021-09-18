@@ -23,6 +23,6 @@ paginate:         5
 version:          2.1.0
 
 github:
-  repo:           https://github.com/veysiadn/veysiadn.github.io/
+  repo:           https://github.com/veysiadn/
 
 theme: jekyll-theme-cayman
