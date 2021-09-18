@@ -1,11 +1,11 @@
 ---
 layout: post
 title: Who am I ?
-```
+
 Hi there, I'm Veysi ADIN, I studied Electrical & Electronics Engineering in Mersin, Turkey. Currently I'm a master student at University of Science and Technology (UST) in 3rd semester, and I'm working at Korea Institute of Science and Technology (KIST) campus as a research assistant. My main focus is on medical robotics software, safety and fieldbus protocols. I enjoy electronics, DIY projects and learning new things everyday. 
-````
+
 ---
-[comment]: <> (This is a comment, it will not be included)
+
 <!---
 your comment goes here
 and here
