@@ -1,9 +1,15 @@
 ---
 layout: post
 title: Who am I ?
+```
+Hi there, I'm Veysi ADIN, I studied Electrical & Electronics Engineering in Mersin, Turkey. Currently I'm a master student at University of Science and Technology (UST) in 3rd semester, and I'm working at Korea Institute of Science and Technology (KIST) campus as a research assistant. My main focus is on medical robotics software, safety and fieldbus protocols. I enjoy electronics, DIY projects and learning new things everyday. 
+````
 ---
+[comment]: <> (This is a comment, it will not be included)
+<!---
+your comment goes here
+and here
 
-...
 ### Built on Poole
 
 Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by [@mdo](https://twitter.com/mdo). Poole, and every theme built on it (like Hyde here) includes the following:
@@ -34,3 +40,4 @@ Hyde is by preference a forward-thinking project. In addition to the latest vers
 Hyde is developed on and hosted with GitHub. Head to the <a href="https://github.com/poole/hyde">GitHub repository</a> for downloads, bug reports, and features requests.
 
 Thanks!
+-->
