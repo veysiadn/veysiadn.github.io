@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Spine Surgery Robot Control Framework</title>
+    <title>AI Based Diagnosis Assistant</title>
     <meta name="description" content="Case study page of Project" />
     <link rel="icon" href="/assets/jpeg/va_logo_resized.jpg">
 
@@ -100,18 +100,14 @@
     </header>
     <section class="project-cs-hero">
       <div class="project-cs-hero__content">
-        <h1 class="heading-primary">Spine Surgery Robot Control Framework</h1>
+        <h1 class="heading-primary">AI Based Diagnosis Assistant</h1>
         <div class="project-cs-hero__info">
           <p class="text-primary">
-            In this project I implemented a control framework using IgH EtherCAT library, ROS2, Qt and Real-time Linux, for Spine Surgery Robot that's being developed in Center for Healthcare Robotics at Korea Institute of 
-            Science and Technology.
+            In this project we implemented AI Based Diagnosis Assistant running on web. Currently we can detect diabetic retinopath level of a person from diabetic retinopath images.
           </p>
         </div>
         <div class="project-cs-hero__cta">
-          <a href="https://www.youtube.com/watch?v=BkucHeNeIkw" class="btn btn--bg" target="_blank">Live Link</a>
-        </div>
-        <div class="project-cs-hero__cta">
-          <a href="https://www.youtube.com/watch?v=KoXekTR4lxw" class="btn btn--bg" target="_blank">Live Link 2 </a>
+          <a href="https://github.com/veysiadn/diagnosis_assistant" class="btn btn--bg" target="_blank">Live Link</a>
         </div>
       </div>
     </section>
@@ -120,14 +116,7 @@
         <div class="project-details__content">
           <div class="project-details__showcase-img-cont">
             <img
-              src="./assets/jpeg/ExperimentalSetup.png"
-              alt="Project Image"
-              class="project-details__showcase-img"
-            />
-          </div>
-          <div class="project-details__showcase-img-cont">
-            <img
-              src="./assets/jpeg/PhySoftIntegration.png"
+              src="./assets/jpeg/PredictionPart.png"
               alt="Project Image"
               class="project-details__showcase-img"
             />
@@ -136,78 +125,37 @@
             <div class="project-details__desc">
               <h3 class="project-details__content-title">Project Overview</h3>
               <p class="project-details__desc-para">
-                Development of spine surgery robot system guided by stereo X-ray and 3D endoscope
+                AI-Based Diagnosis Assistant Running on Web
                 </ol>
               </p>
               <p class="project-details__desc-para">
-                In the physical integration part,
-                the system consists of three motor driver slaves, three motor
-                connected to motor drivers and one Arduino based custom
-                slave (EasyCAT) for additional sensor integration. Currently,
-                custom slave has two limit switch sensors, and emergencystop button added to EtherCAT bus. Seven more digital
-                I/O and six analog I/O can be added to the bus by using
-                the custom slave. Slaves are connected to the master in
-                daisy-chain topology. Since implementation of EtherCAT
-                master does not require any special hardware, any PC with
-                network interface card can be EtherCAT master.
-                Software integration part consists of real-time patched
-                (RT PREEMPT) Linux distribution Xubuntu 18.04, ROS2
-                and several nodes in ROS2 depicted in figure above. Linux
-                itself is not real-time, however there are several methods
-                to bring real-time features to Linux such as dual-kernel
-                approach with Xenomai and RTAI, or single-kernel approach
-                with RT PREEMPT maintained by Linux Foundation.Even
-                though dual kernel implementations has better real-time performance, considering implementation time, portability,
-                scalability, adaptation to programming environment of each
-                patch, and community support, RT PREEMPT is better realtime solution for our application.
-                Control software is consists of four components (ROS2
-                nodes) as shown in Fig 1. Currently we implemented three
-                nodes, and planning to implement one more node as safety
-                node in which system related safety information will be
-                checked every cycle.
-                <ol>
-                <li> - EtherCAT node : Responsible for EtherCAT communication between master and slaves and publishes acquired feedback from slaves under /slave feedback topic
-                name in 1 kHz frequency. Additionally, subscribes to
-                /master commands topic published from control node
-                and sends control commands to slaves via EtherCAT
-                communication.</li>
-                
-                <li> - Control node : Kinematic calculations will be done in
-                this node.This node subscribes /slave feedback topic
-                published from EtherCAT node and publishes control
-                commands under /master commands topic.</li>
-                <li> - GUI node : Consist of camera viewer and slave feedback visualizers such as motor state, communication
-                state, emergency button state. Publishes under /gui data
-                consists of soft emergency button events, subscribes to
-                /master commands and /slave feedback topics to give
-                visual feedback to user
-              </li>
+                To be updated.
               </p>
             </div>
             <div class="project-details__tools-used">
               <h3 class="project-details__content-title">Tools Used</h3>
               <div class="skills">
-                <div class="skills__skill">C++</div>
+                <div class="skills__skill">HTML</div>
+                <div class="skills__skill">CSS</div>
+                <div class="skills__skill">JavaScript</div>
+                <div class="skills__skill">Firebase</div>
+                <div class="skills__skill">PyTorch</div>
+                <div class="skills__skill">ONNX</div>
                 <div class="skills__skill">Python</div>
-                <div class="skills__skill">ROS2</div>
-                <div class="skills__skill">IgH EtherCAT Library</div>
-                <div class="skills__skill">Qt</div>
-                <div class="skills__skill">GIT</div>
-                <div class="skills__skill">Real-time Linux</div>
-                <div class="skills__skill">Doxygen</div>
-                <div class="skills__skill">CiA402</div>
+                <div class="skills__skill">Tensorflow</div>
+                <div class="skills__skill">Netron</div>
               </div>
             </div>
             <div class="project-details__links">
               <h3 class="project-details__content-title">See Live</h3>
               <a
-                href="https://www.youtube.com/watch?v=KoXekTR4lxw"
+                href="https://veysiadn.github.io/diagnosis_assistant/"
                 class="btn btn--med btn--theme project-details__links-btn"
                 target="_blank"
                 >Live Link</a
               >
               <a
-                href="https://github.com/veysiadn/spinerobot_ws"
+                href="https://github.com/veysiadn/diagnosis_assistant"
                 class="btn btn--med btn--theme-inv project-details__links-btn"
                 target="_blank"
                 >Code Link</a
