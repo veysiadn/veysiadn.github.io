@@ -47,7 +47,10 @@ a {
   color: inherit; }
 
 li {
-  list-style: none; }
+  list-style: none;
+  font-family: 'Source Sans Pro', sans-serif; 
+  font-size: 2rem;
+}
 
 input:focus,
 button:focus,

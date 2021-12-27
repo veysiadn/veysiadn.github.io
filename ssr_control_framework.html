@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Spine Surgery Robot Control Framework</title>
+    <meta name="description" content="Case study page of Project" />
+    <link rel="icon" href="/assets/jpeg/va_logo_resized.jpg">
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+              src="./assets/png/veysiadn.png"
+              alt="Veysi ADIN's Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Veysi ADIN</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projects
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#team" class="header__link">
+                Team
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#awards" class="header__link">
+                Awards
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+            <li class="header__sm-menu-link">
+              <a href="./index.html#team"> Team </a>
+            </li>
+            <li class="header__sm-menu-link">
+              <a href="./index.html#awards"> Awards </a>
+            </li>
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Spine Surgery Robot Control Framework</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            In this project I implemented a control framework using IgH EtherCAT library, ROS2, Qt and Real-time Linux, for Spine Surgery Robot that's being developed in Center for Healthcare Robotics at Korea Institute of 
+            Science and Technology.
+          </p>
+        </div>
+        <div class="project-cs-hero__cta">
+          <a href="https://www.youtube.com/watch?v=BkucHeNeIkw" class="btn btn--bg" target="_blank">Live Link</a>
+        </div>
+        <div class="project-cs-hero__cta">
+          <a href="https://www.youtube.com/watch?v=KoXekTR4lxw" class="btn btn--bg" target="_blank">Live Link 2 </a>
+        </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <img
+              src="./assets/jpeg/ExperimentalSetup.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+            />
+          </div>
+          <div class="project-details__showcase-img-cont">
+            <img
+              src="./assets/jpeg/PhySoftIntegration.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+            />
+          </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Project Overview</h3>
+              <p class="project-details__desc-para">
+                Development of spine surgery robot system guided by stereo X-ray and 3D endoscope
+                </ol>
+              </p>
+              <p class="project-details__desc-para">
+                In the physical integration part,
+                the system consists of three motor driver slaves, three motor
+                connected to motor drivers and one Arduino based custom
+                slave (EasyCAT) for additional sensor integration. Currently,
+                custom slave has two limit switch sensors, and emergencystop button added to EtherCAT bus. Seven more digital
+                I/O and six analog I/O can be added to the bus by using
+                the custom slave. Slaves are connected to the master in
+                daisy-chain topology. Since implementation of EtherCAT
+                master does not require any special hardware, any PC with
+                network interface card can be EtherCAT master.
+                Software integration part consists of real-time patched
+                (RT PREEMPT) Linux distribution Xubuntu 18.04, ROS2
+                and several nodes in ROS2 depicted in figure above. Linux
+                itself is not real-time, however there are several methods
+                to bring real-time features to Linux such as dual-kernel
+                approach with Xenomai and RTAI, or single-kernel approach
+                with RT PREEMPT maintained by Linux Foundation.Even
+                though dual kernel implementations has better real-time performance, considering implementation time, portability,
+                scalability, adaptation to programming environment of each
+                patch, and community support, RT PREEMPT is better realtime solution for our application.
+                Control software is consists of four components (ROS2
+                nodes) as shown in Fig 1. Currently we implemented three
+                nodes, and planning to implement one more node as safety
+                node in which system related safety information will be
+                checked every cycle.
+                <ol>
+                <li> - EtherCAT node : Responsible for EtherCAT communication between master and slaves and publishes acquired feedback from slaves under /slave feedback topic
+                name in 1 kHz frequency. Additionally, subscribes to
+                /master commands topic published from control node
+                and sends control commands to slaves via EtherCAT
+                communication.</li>
+                
+                <li> - Control node : Kinematic calculations will be done in
+                this node.This node subscribes /slave feedback topic
+                published from EtherCAT node and publishes control
+                commands under /master commands topic.</li>
+                <li> - GUI node : Consist of camera viewer and slave feedback visualizers such as motor state, communication
+                state, emergency button state. Publishes under /gui data
+                consists of soft emergency button events, subscribes to
+                /master commands and /slave feedback topics to give
+                visual feedback to user
+              </li>
+              </p>
+            </div>
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools Used</h3>
+              <div class="skills">
+                <div class="skills__skill">C++</div>
+                <div class="skills__skill">Python</div>
+                <div class="skills__skill">ROS2</div>
+                <div class="skills__skill">IgH EtherCAT Library</div>
+                <div class="skills__skill">Qt</div>
+                <div class="skills__skill">GIT</div>
+                <div class="skills__skill">Real-time Linux</div>
+                <div class="skills__skill">Doxygen</div>
+                <div class="skills__skill">CiA402</div>
+              </div>
+            </div>
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">See Live</h3>
+              <a
+                href="https://www.youtube.com/watch?v=KoXekTR4lxw"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+                >Live Link</a
+              >
+              <a
+                href="https://github.com/veysiadn/spinerobot_ws"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Code Link</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/veysiadn/">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/veysiadn">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://twitter.com/veysiadn">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/twitter-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.youtube.com/channel/UC_gTbsnIiPLEvORoNSgZIcA">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/yt-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.instagram.com/veysiadn/">
+                <img
+                  class="main-footer__icon main-footer__icon--mr-none"
+                  src="./assets/png/insta-ico.png"
+                  alt="icon"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Veysi ADIN</h4>
+            <p class="main-footer__short-desc">
+              Wish you all the best.
+            </p>
+          </div>
+        </div>
+
+        <!-- If you give me some credit or shoutout here by linking to my website, then it will be a big thing for me and will help me a lot :) -->
+        <div class="main-footer__lower">
+          &copy; Copyright 2021. Made by
+          <a rel="noreferrer" target="_blank" href="https://rammaheshwari.com"
+            >Ram Maheshwari</a
+          > . Thanks to him, I used this template for my personal Webpage.
+        </div>
+      </div>
+    </footer>
+
+    <script src="./index.js"></script>
+  </body>
+</html>
