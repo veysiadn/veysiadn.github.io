@@ -29,7 +29,8 @@
           <div class="header__logo-img-cont">
             <img
               src="./assets/png/veysiadn.png"
-              alt="Veysi ADIN's Logo Image"
+              alt=""
+              aria-hidden="true"
               class="header__logo-img"
             />
           </div>
@@ -70,12 +71,14 @@
           >
             <img
               src="./assets/svg/ham-menu.svg"
-              alt="hamburger menu"
+              alt=""
+              aria-hidden="true"
               class="header__main-ham-menu"
             />
             <img
               src="./assets/svg/ham-menu-close.svg"
-              alt="hamburger menu close"
+              alt=""
+              aria-hidden="true"
               class="header__main-ham-menu-close d-none"
             />
           </button>
@@ -147,7 +150,7 @@
       </div>
     </section>
     <a class="case-study__rail" href="#project-details">
-      <span>Continue / System architecture</span><span aria-hidden="true">&darr;</span>
+      <span>Continue to the system architecture</span><span aria-hidden="true">&darr;</span>
     </a>
     <section class="project-details" id="project-details" aria-labelledby="project-details-title">
       <div class="main-container">
@@ -178,72 +181,54 @@
           </div>
           <div class="project-details__content-main">
             <div class="project-details__desc">
-              <h3 class="project-details__content-title">Project Overview</h3>
+              <h3 class="project-details__content-title">Project overview</h3>
               <p class="project-details__desc-para">
-                Development of spine surgery robot system guided by stereo X-ray and 3D endoscope
-                </ol>
+                Developed with an industrial partner, the project combined control software
+                and custom hardware for a spine surgery robot guided by stereo X-ray and a
+                3D endoscope.
               </p>
               <p class="project-details__desc-para">
-                In the physical integration part,
-                the system consists of three motor driver slaves, three motor
-                connected to motor drivers and one Arduino based custom
-                slave (EasyCAT) for additional sensor integration. Currently,
-                custom slave has two limit switch sensors, and emergencystop button added to EtherCAT bus. Seven more digital
-                I/O and six analog I/O can be added to the bus by using
-                the custom slave. Slaves are connected to the master in
-                daisy-chain topology. Since implementation of EtherCAT
-                master does not require any special hardware, any PC with
-                network interface card can be EtherCAT master.
-                Software integration part consists of real-time patched
-                (RT PREEMPT) Linux distribution Xubuntu 18.04, ROS2
-                and several nodes in ROS2 depicted in figure above. Linux
-                itself is not real-time, however there are several methods
-                to bring real-time features to Linux such as dual-kernel
-                approach with Xenomai and RTAI, or single-kernel approach
-                with RT PREEMPT maintained by Linux Foundation.Even
-                though dual kernel implementations has better real-time performance, considering implementation time, portability,
-                scalability, adaptation to programming environment of each
-                patch, and community support, RT PREEMPT is better realtime solution for our application.
-                Control software is consists of four components (ROS2
-                nodes) as shown in Fig 1. Currently we implemented three
-                nodes, and planning to implement one more node as safety
-                node in which system related safety information will be
-                checked every cycle.
+                The EtherCAT network connected three motor-driver slaves and an Arduino-based
+                EasyCAT I/O slave in a daisy chain. The custom slave handled two limit switches
+                and an emergency-stop button, with capacity for seven additional digital and six
+                analog I/O channels. The IgH master ran through a standard PC network interface.
+              </p>
+              <p class="project-details__desc-para">
+                The software stack used ROS 2 Dashing on PREEMPT_RT Xubuntu 18.04 with kernel
+                4.19.182-rt74. I developed the C++/Qt control framework and designed supporting
+                electronics and mechanical parts with Altium Designer, EasyEDA, and SolidWorks.
+                Three ROS 2 nodes were implemented, with a fourth safety-monitor node planned to
+                check the system state on every cycle.
               </p>
               <ol class="project-details__system-list">
-                <li><strong>EtherCAT node:</strong> Responsible for EtherCAT communication between master and slaves and publishes acquired feedback from slaves under /slave feedback topic
-                name in 1 kHz frequency. Additionally, subscribes to
-                /master commands topic published from control node
-                and sends control commands to slaves via EtherCAT
-                communication.</li>
-                
-                <li><strong>Control node:</strong> Kinematic calculations will be done in
-                this node.This node subscribes /slave feedback topic
-                published from EtherCAT node and publishes control
-                commands under /master commands topic.</li>
-                <li><strong>GUI node:</strong> Consist of camera viewer and slave feedback visualizers such as motor state, communication
-                state, emergency button state. Publishes under /gui data
-                consists of soft emergency button events, subscribes to
-                /master commands and /slave feedback topics to give
-                visual feedback to user.</li>
+                <li><strong>EtherCAT node:</strong> Handles communication between the master and
+                slaves, publishes feedback at 1 kHz, and sends control commands to the drives.</li>
+                <li><strong>Control node:</strong> Performs kinematic calculations and converts
+                slave feedback into motor commands.</li>
+                <li><strong>GUI node:</strong> Displays the camera feed, motor and communication
+                states, and emergency-stop status while forwarding operator events.</li>
               </ol>
             </div>
             <div class="project-details__tools-used">
-              <h3 class="project-details__content-title">Tools Used</h3>
+              <h3 class="project-details__content-title">Tools and platforms</h3>
               <div class="skills">
                 <div class="skills__skill">C++</div>
                 <div class="skills__skill">Python</div>
-                <div class="skills__skill">ROS2</div>
+                <div class="skills__skill">ROS 2 Dashing</div>
                 <div class="skills__skill">IgH EtherCAT Library</div>
                 <div class="skills__skill">Qt</div>
-                <div class="skills__skill">GIT</div>
-                <div class="skills__skill">Real-time Linux</div>
+                <div class="skills__skill">Git</div>
+                <div class="skills__skill">PREEMPT_RT Linux</div>
+                <div class="skills__skill">Xubuntu 18.04</div>
+                <div class="skills__skill">Altium Designer</div>
+                <div class="skills__skill">EasyEDA</div>
+                <div class="skills__skill">SolidWorks</div>
                 <div class="skills__skill">Doxygen</div>
-                <div class="skills__skill">CiA402</div>
+                <div class="skills__skill">CiA 402</div>
               </div>
             </div>
             <div class="project-details__links">
-              <h3 class="project-details__content-title">See Live</h3>
+              <h3 class="project-details__content-title">Demos and code</h3>
               <a
                 href="https://www.youtube.com/watch?v=JwIe-fkz2wE&ab_channel=HamlynSymposiumonMedicalRobotics"
                 class="btn btn--med btn--theme project-details__links-btn"
@@ -270,7 +255,7 @@
                 class="btn btn--med btn--theme-inv project-details__links-btn"
                 target="_blank"
                 rel="noreferrer"
-                >Code Link</a
+                >View code</a
               >
             </div>
           </div>
@@ -290,35 +275,35 @@
                 <img
                   class="main-footer__icon"
                   src="./assets/png/linkedin-ico.png"
-                  alt="icon"
+                  alt="LinkedIn"
                 />
               </a>
               <a target="_blank" rel="noreferrer" href="https://github.com/veysiadn">
                 <img
                   class="main-footer__icon"
                   src="./assets/png/github-ico.png"
-                  alt="icon"
+                  alt="GitHub"
                 />
               </a>
               <a target="_blank" rel="noreferrer" href="https://twitter.com/veysiadn">
                 <img
                   class="main-footer__icon"
                   src="./assets/png/twitter-ico.png"
-                  alt="icon"
+                  alt="Twitter"
                 />
               </a>
               <a target="_blank" rel="noreferrer" href="https://www.youtube.com/channel/UC_gTbsnIiPLEvORoNSgZIcA">
                 <img
                   class="main-footer__icon"
                   src="./assets/png/yt-ico.png"
-                  alt="icon"
+                  alt="YouTube"
                 />
               </a>
               <a target="_blank" rel="noreferrer" href="https://www.instagram.com/veysiadn/">
                 <img
                   class="main-footer__icon main-footer__icon--mr-none"
                   src="./assets/png/insta-ico.png"
-                  alt="icon"
+                  alt="Instagram"
                 />
               </a>
             </div>
