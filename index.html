@@ -3,560 +3,555 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Veysi ADIN's Personal Webpage</title>
-    <meta name="description" content="Veysi ADIN's portfolio" />
-    <link rel="icon" href="/assets/jpeg/va_logo_resized.jpg">
-    <link rel="stylesheet" href="css/modern.css" />
+    <meta name="theme-color" content="#101210" id="theme-color-meta" />
+    <meta
+      name="description"
+      content="Veysi ADIN is an embedded software engineer building dependable robotics, medical devices, and real-time control systems."
+    />
+    <meta property="og:title" content="Veysi ADIN | Embedded Software Engineer" />
+    <meta
+      property="og:description"
+      content="Robotics, medical devices, and real-time control systems engineered from hardware to interface."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="./assets/jpeg/ExperimentalSetup.png" />
+    <title>Veysi ADIN | Embedded Software Engineer</title>
 
+    <link rel="icon" href="./assets/jpeg/va_logo_resized.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700;800&family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
       rel="stylesheet"
     />
+    <script>
+      try {
+        const savedTheme = localStorage.getItem('theme')
+        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches
+          ? 'dark'
+          : 'light'
+        document.documentElement.dataset.theme = savedTheme || systemTheme
+      } catch (error) {
+        document.documentElement.dataset.theme = 'light'
+      }
+    </script>
+    <link rel="stylesheet" href="css/modern.css" />
   </head>
-  <body>
+  <body class="home-page">
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true">
+      <span class="scroll-progress__bar"></span>
+    </div>
+
     <header class="header">
       <div class="header__content">
-        <div class="header__logo-container">
-          <div class="header__logo-img-cont">
-            <img
-              src="./assets/png/veysiadn.png"
-              alt="Veysi ADIN's Logo Image"
-              class="header__logo-img"
-            />
-          </div>
-          <span class="header__logo-sub">Veysi ADIN</span>
-        </div>
-        <div class="header__main">
+        <a class="header__logo-container" href="#home" aria-label="Veysi ADIN, home">
+          <span class="header__monogram" aria-hidden="true">VA</span>
+          <span class="header__logo-copy">
+            <span class="header__logo-sub">Veysi ADIN</span>
+            <span class="header__logo-role">Embedded systems</span>
+          </span>
+        </a>
+
+        <nav class="header__main" aria-label="Primary navigation">
           <ul class="header__links">
-            <li class="header__link-wrapper">
-              <a href="./index.html" class="header__link"> Home </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#about" class="header__link">About </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#projects" class="header__link">
-                Projects
-              </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#team" class="header__link">
-                Teams
-              </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#awards" class="header__link">
-                Awards
-              </a>
-            </li>
-            <li class="header__link-wrapper">
-              <a href="./index.html#contact" class="header__link"> Contact </a>
-            </li>
+            <li><a href="#projects" class="header__link">Work</a></li>
+            <li><a href="#about" class="header__link">About</a></li>
+            <li><a href="#toolkit" class="header__link">Toolkit</a></li>
+            <li><a href="#journey" class="header__link">Journey</a></li>
+            <li><a href="#awards" class="header__link">Recognition</a></li>
           </ul>
-          <div class="header__main-ham-menu-cont">
-            <img
-              src="./assets/svg/ham-menu.svg"
-              alt="hamburger menu"
-              class="header__main-ham-menu"
-            />
-            <img
-              src="./assets/svg/ham-menu-close.svg"
-              alt="hamburger menu close"
-              class="header__main-ham-menu-close d-none"
-            />
-          </div>
-        </div>
-      </div>
-      <div class="header__sm-menu">
-        <div class="header__sm-menu-content">
-          <ul class="header__sm-menu-links">
-            <li class="header__sm-menu-link">
-              <a href="./index.html"> Home </a>
-            </li>
 
-            <li class="header__sm-menu-link">
-              <a href="./index.html#about"> About </a>
-            </li>
-
-            <li class="header__sm-menu-link">
-              <a href="./index.html#projects"> Projects </a>
-            </li>
-            <li class="header__sm-menu-link">
-              <a href="./index.html#team"> Team </a>
-            </li>
-            <li class="header__sm-menu-link">
-              <a href="./index.html#awards"> Awards </a>
-            </li>
-            <li class="header__sm-menu-link">
-              <a href="./index.html#contact"> Contact </a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </header>
-    <section class="home-hero">
-      <div class="home-hero__content">
-        <h1 class="heading-primary">Hey, My name is Veysi ADIN</h1>
-        <div class="home-hero__info">
-          <p class="text-primary">
-            Motto : "Know thyself and nothing in excess"
-          </p>
-        </div>
-        <div class="home-hero__cta">
-          <a href="./#projects" class="btn btn--bg">Projects</a>
-        </div>
-      </div>
-      <div class="home-hero__socials">
-        <div class="home-hero__social">
-          <a href="https://www.linkedin.com/in/veysiadn/" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/linkedin-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a href="https://github.com/veysiadn" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/github-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a href="https://twitter.com/veysiadn" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/twitter-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a href="https://www.youtube.com/channel/UC_gTbsnIiPLEvORoNSgZIcA" class="home-hero__social-icon-link">
-            <img
-              src="./assets/png/yt-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-        <div class="home-hero__social">
-          <a
-            href="https://www.instagram.com/veysiadn/"
-            class="home-hero__social-icon-link home-hero__social-icon-link--bd-none"
-          >
-            <img
-              src="./assets/png/insta-ico.png"
-              alt="icon"
-              class="home-hero__social-icon"
-            />
-          </a>
-        </div>
-      </div>
-      <div class="home-hero__mouse-scroll-cont">
-        <div class="mouse"></div>
-      </div>
-    </section>
-    <section id="about" class="about sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main">About Me</span>
-          <span class="heading-sec__sub">
-            <p>I am an Embedded Software Developer with a passion to build and develop robots/robotic applications to make human life easier.</p>
-            <span> ﹀ </span>
-            <p><a
-              href="/assets/pdf/CV_Veysi_ADIN.pdf"
-              class="btn btn--med btn--theme dynamicBgClr"
-              target="_blank"
-              >Curriculum vitae</a>
-            </p>
-          </span>
-
-        </h2>
-        <div class="about__content">
-          <div class="about__content-main">
-            <h3 class="about__content-title">Get to know me!</h3>
-            <div class="about__content-details">
-              <p class="about__content-details-para">
-                Hey! It's
-                <strong>Veysi ADIN</strong>
-                and I'm an <strong> Embedded System Engineer </strong> located in
-                Malmö, Sweden, with over three years of experience in developing and testing
-                software for various embedded systems. I have expertise in C, C++, and Python programming languages, as well
-                as in hardware architectures, operating systems, and communication protocols. I worked on projects involving
-                robotics, medical devices, and consumer electronic products, delivering high-quality, safe, and reliable software
-                solutions. Having obtained a master's degree in robotics and control software development, I enjoy robotics,
-                electronics, DIY projects, and learning new things every day. I like to develop applications that solve real-life
-                problems.
-              </p>
-              <p class="about__content-details-para">
-                I like to develop applications that solve real life problems.
-                You can <strong>contact</strong> me here.
-              </p>
-            </div>
-            <a href="./#contact" class="btn btn--med btn--theme dynamicBgClr"
-              >Contact</a
+          <div class="header__actions">
+            <button
+              class="icon-button command-trigger"
+              type="button"
+              aria-label="Open quick navigation"
+              title="Quick navigation"
             >
-          </div>
-          <div class="about__content-skills">
-            <h3 class="about__content-title">My Skills</h3>
-            <div class="skills">
-              <div class="skills__skill">C++</div>
-              <div class="skills__skill">C</div>
-              <div class="skills__skill">Python</div>
-              <div class="skills__skill">MATLAB & Octave</div>
-              <div class="skills__skill">Qt</div>
-              <div class="skills__skill">ROS / ROS2</div>
-              <div class="skills__skill">Real-time Linux</div>
-              <div class="skills__skill">GIT</div>
-              <div class="skills__skill">STM32</div>
-              <div class="skills__skill">Altium Designer/KiCAD/EasyEDA</div>
-              <div class="skills__skill">Medical Robotics</div>
-              <div class="skills__skill">CiA402</div>
-              <div class="skills__skill">Motor Control</div>
-              <div class="skills__skill">EtherCAT</div>
-              <!-- <div class="skills__skill">Shopify</div>
-              <div class="skills__skill">Wordpress</div>
-              <div class="skills__skill">Google ADS</div>
-              <div class="skills__skill">Facebook Ads</div>
-              <div class="skills__skill">Android</div>
-              <div class="skills__skill">IOS</div> -->
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects" class="projects sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-bg">
-          <span class="heading-sec__main">Projects</span>
-          <span class="heading-sec__sub">
-            Here you can see projects that I involved in and contributed to it's development.
-          </span>
-        </h2>
-
-        <div class="projects__content">
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/jpeg/ExperimentalSetup.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Spine Surgery Robot Control Framework</h3>
-              <p class="projects__row-content-desc">
-                Development of spine surgery robot system guided by stereo X-ray and 3D endoscope
-              </p>
-              <a
-                href="./ssr_control_framework.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                >Details</a
-              >
-            </div>
-          </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/jpeg/ControllerPartsDetail.jpg"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Microdebrider Control Software</h3>
-              <p class="projects__row-content-desc">
-                Development of control software for a medical startup company.
-              </p>
-              <a
-                href="./microdebrider_controller.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                >Details</a
-              >
-            </div>
-          </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/jpeg/PredictionPart.png"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">AI Based Diagnosis Assistant</h3>
-              <p class="projects__row-content-desc">
-                In this project, We built AI based diagnosis assistant application running on web.
-              </p>
-              <a
-                href="./diagnosis_assistant.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                >Details</a
-              >
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-
-    <section id="team" class="team sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-bg">
-          <span class="heading-sec__main">Team</span>
-          <span class="heading-sec__sub">
-            Here you can see teams that I worked with during my master degree.
-          </span>
-        </h2>
-        
-        <div class="projects__content">
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/jpeg/LabTeam.JPG"
-                alt="TeamPhoto"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Spine Surgery Robot Control Framework Development Team</h3>
-              <p class="projects__row-content-desc">
-                 My team during master degree and the development of Spine Surgery Robot Project.
-              </p>
-              <a
-                href="./ssr_control_framework.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                #target="_blank"
-                >Details</a
-              >
-            </div>
-          </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/jpeg/DiagnosisAssistantTeam.JPG"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Diagnosis Assistant Development Team</h3>
-              <p class="projects__row-content-desc">
-                Development of AI based Diagnosis Assistant
-              </p>
-              <a
-                href="./diagnosis_assistant.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                >Details</a
-              >
-            </div>
-          </div>
-      </div>
-    </section>
-
-    <section id="awards" class="awards sec-pad">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-bg">
-          <span class="heading-sec__main">Awards</span>
-          <span class="heading-sec__sub">
-            Here you can see awards that me and my teammates won together.
-          </span>
-        </h2>
-        
-        <div class="projects__content">
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/jpeg/kiri-award-photo.JPG"
-                alt="TeamPhoto"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Kiri-Lab Idea Bubling Competition</h3>
-              <p class="projects__row-content-desc">
-                 I won encouragement award, in the KIST School Kiri-Lab Idea Bubling Competition with my project Development of Real-time EtherCAT Master using Raspberry Pi.
-              </p>
-              <a
-                href="https://www.youtube.com/watch?v=UaHLfNDjBoc"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >Details</a
-              >
-            </div>
-          </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/jpeg/DiagnosisAssistantTeam.JPG"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Daewoong Foundation Hackathon</h3>
-              <p class="projects__row-content-desc">
-                We've competed in the Daewoong Foundation Hackathon with our AI based Diagnosis Assistant project.
-              </p>
-              <a
-                href="./diagnosis_assistant.html"
-                class="btn btn--med btn--theme dynamicBgClr"
-                >Details</a
-              >
-            </div>
-          </div>
-          <div class="projects__row">
-            <div class="projects__row-img-cont">
-              <img
-                src="./assets/jpeg/Graduation Talk.jpg"
-                alt="Software Screenshot"
-                class="projects__row-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="projects__row-content">
-              <h3 class="projects__row-content-title">Mersin University Engineering Faculty Valedictorian</h3>
-              <p class="projects__row-content-desc">
-                Here is a picture of me doing commencement speech for  Engineering Faculty Graduation Ceramony
-              </p>
-              <a
-                href="http://www.mersin.edu.tr/haberler/352971/genc-muhendisler-mezun-oldu"
-                class="btn btn--med btn--theme dynamicBgClr"
-                target="_blank"
-                >Details</a
-              >
-            </div>
-
-      </div>
-    </section>
-
-    <section id="contact" class="contact sec-pad dynamicBg">
-      <div class="main-container">
-        <h2 class="heading heading-sec heading-sec__mb-med">
-          <span class="heading-sec__main heading-sec__main--lt">Contact</span>
-          <span class="heading-sec__sub heading-sec__sub--lt">
-            You can contact me here, through e-mail or LinkedIn.
-          </span>
-        </h2>
-        <div class="contact__form-container">
-          <form action="#" class="contact__form">
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="name">Name</label>
-              <input
-                required
-                placeholder="Enter Your Name"
-                type="text"
-                class="contact__form-input"
-                name="name"
-                id="name"
-              />
-            </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="email">Email</label>
-              <input
-                required
-                placeholder="Enter Your Email"
-                type="text"
-                class="contact__form-input"
-                name="email"
-                id="email"
-              />
-            </div>
-            <div class="contact__form-field">
-              <label class="contact__form-label" for="message">Message</label>
-              <textarea
-                required
-                cols="30"
-                rows="10"
-                class="contact__form-input"
-                placeholder="Enter Your Message"
-                name="message"
-                id="message"
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn--theme contact__btn">
-              Submit
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="11" cy="11" r="7"></circle>
+                <path d="m20 20-4-4"></path>
+              </svg>
             </button>
-          </form>
-        </div>
+            <button
+              class="icon-button theme-toggle"
+              type="button"
+              aria-label="Switch to dark theme"
+              title="Switch color theme"
+            >
+              <svg class="theme-toggle__icon theme-toggle__icon--moon" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8Z"></path>
+              </svg>
+              <svg class="theme-toggle__icon theme-toggle__icon--sun" viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="4"></circle>
+                <path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"></path>
+              </svg>
+            </button>
+            <button
+              class="header__main-ham-menu-cont icon-button"
+              type="button"
+              aria-label="Open navigation menu"
+              aria-controls="mobile-menu"
+              aria-expanded="false"
+            >
+              <svg class="header__main-ham-menu" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 7h16M4 12h16M4 17h16"></path>
+              </svg>
+              <svg class="header__main-ham-menu-close d-none" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="m6 6 12 12M18 6 6 18"></path>
+              </svg>
+            </button>
+          </div>
+        </nav>
       </div>
-    </section>
-    <footer class="main-footer">
-      <div class="main-container">
-        <div class="main-footer__upper">
-          <div class="main-footer__row main-footer__row-1">
-            <h2 class="heading heading-sm main-footer__heading-sm">
-              <span>Social</span>
-            </h2>
-            <div class="main-footer__social-cont">
-              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/veysiadn/">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/linkedin-ico.png"
-                  alt="icon"
-                />
+
+      <nav class="header__sm-menu" id="mobile-menu" aria-label="Mobile navigation">
+        <ul class="header__sm-menu-links">
+          <li class="header__sm-menu-link"><a href="#projects">Work</a></li>
+          <li class="header__sm-menu-link"><a href="#about">About</a></li>
+          <li class="header__sm-menu-link"><a href="#toolkit">Toolkit</a></li>
+          <li class="header__sm-menu-link"><a href="#journey">Journey</a></li>
+          <li class="header__sm-menu-link"><a href="#awards">Recognition</a></li>
+          <li class="header__sm-menu-link"><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <dialog class="command-menu" aria-labelledby="command-title">
+      <div class="command-menu__header">
+        <div>
+          <span class="eyebrow">Navigate</span>
+          <h2 id="command-title">Where to?</h2>
+        </div>
+        <button class="icon-button command-menu__close" type="button" aria-label="Close quick navigation">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"></path></svg>
+        </button>
+      </div>
+      <label class="command-menu__search">
+        <span class="sr-only">Filter navigation options</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <circle cx="11" cy="11" r="7"></circle>
+          <path d="m20 20-4-4"></path>
+        </svg>
+        <input id="command-search" type="search" placeholder="Find a section or project" autocomplete="off" />
+      </label>
+      <div class="command-menu__results" role="list">
+        <button type="button" data-command="#projects" data-search="work projects robotics medical ai">
+          <span>01</span><strong>Selected work</strong><small>Projects</small>
+        </button>
+        <button type="button" data-command="#about" data-search="about profile experience veysi">
+          <span>02</span><strong>About me</strong><small>Profile</small>
+        </button>
+        <button type="button" data-command="#toolkit" data-search="skills toolkit c++ python ros ethercat">
+          <span>03</span><strong>Engineering toolkit</strong><small>Capabilities</small>
+        </button>
+        <button type="button" data-command="#awards" data-search="awards recognition team achievements">
+          <span>04</span><strong>Recognition</strong><small>Awards</small>
+        </button>
+        <button type="button" data-command="#contact" data-search="contact linkedin github connect">
+          <span>05</span><strong>Start a conversation</strong><small>Contact</small>
+        </button>
+      </div>
+      <p class="command-menu__empty" hidden>No matching destination.</p>
+    </dialog>
+
+    <main id="main-content">
+      <section class="home-hero" id="home" aria-labelledby="hero-title">
+        <img
+          class="home-hero__media"
+          src="./assets/jpeg/Experimental_Setup.jpg"
+          alt=""
+          aria-hidden="true"
+        />
+        <div class="home-hero__veil" aria-hidden="true"></div>
+
+        <div class="main-container home-hero__content">
+          <div class="home-hero__intro">
+            <p class="hero-status">
+              <span class="hero-status__pulse" aria-hidden="true"></span>
+              Embedded software engineer <span aria-hidden="true">/</span> Malm&ouml;, Sweden
+            </p>
+            <h1 class="heading-primary" id="hero-title">
+              Veysi <span>ADIN</span>
+            </h1>
+            <p class="home-hero__statement">
+              I build dependable systems where <strong>code meets motion</strong>.
+              Robotics, medical devices, and real-time control from hardware to interface.
+            </p>
+            <div class="home-hero__cta">
+              <a href="#projects" class="btn btn--primary">
+                Explore selected work
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
               </a>
-              <a target="_blank" rel="noreferrer" href="https://github.com/veysiadn">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/github-ico.png"
-                  alt="icon"
-                />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://twitter.com/veysiadn">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/twitter-ico.png"
-                  alt="icon"
-                />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://www.youtube.com/channel/UC_gTbsnIiPLEvORoNSgZIcA">
-                <img
-                  class="main-footer__icon"
-                  src="./assets/png/yt-ico.png"
-                  alt="icon"
-                />
-              </a>
-              <a target="_blank" rel="noreferrer" href="https://www.instagram.com/veysiadn/">
-                <img
-                  class="main-footer__icon main-footer__icon--mr-none"
-                  src="./assets/png/insta-ico.png"
-                  alt="icon"
-                />
+              <a href="./assets/pdf/CV_Veysi_ADIN.pdf" class="btn btn--ghost" target="_blank" rel="noreferrer">
+                View CV
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"></path></svg>
               </a>
             </div>
           </div>
-          <div class="main-footer__row main-footer__row-2">
-            <h4 class="heading heading-sm text-lt">Veysi ADIN</h4>
-            <p class="main-footer__short-desc">
-              Wish you all the best.
+
+          <dl class="home-hero__facts">
+            <div>
+              <dt>Focus</dt>
+              <dd>Medical robotics</dd>
+            </div>
+            <div>
+              <dt>Core</dt>
+              <dd>C / C++ / Python</dd>
+            </div>
+            <div>
+              <dt>Local time</dt>
+              <dd data-local-time>--:--</dd>
+            </div>
+          </dl>
+        </div>
+
+        <div class="home-hero__socials" aria-label="Social profiles">
+          <a href="https://www.linkedin.com/in/veysiadn/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/veysiadn" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.youtube.com/channel/UC_gTbsnIiPLEvORoNSgZIcA" target="_blank" rel="noreferrer">YouTube</a>
+        </div>
+
+        <a class="home-hero__scroll" href="#projects" aria-label="Scroll to selected work">
+          <span>Scroll</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v16M6 14l6 6 6-6"></path></svg>
+        </a>
+      </section>
+
+      <div class="signal-strip" aria-label="Core technologies">
+        <div class="signal-strip__track">
+          <span>C++</span><i aria-hidden="true"></i>
+          <span>ROS 2</span><i aria-hidden="true"></i>
+          <span>EtherCAT</span><i aria-hidden="true"></i>
+          <span>Real-time Linux</span><i aria-hidden="true"></i>
+          <span>Qt</span><i aria-hidden="true"></i>
+          <span>STM32</span><i aria-hidden="true"></i>
+          <span>Motor control</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">C++</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">ROS 2</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">EtherCAT</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">Real-time Linux</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">Qt</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">STM32</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">Motor control</span><i aria-hidden="true"></i>
+        </div>
+      </div>
+
+      <section class="projects section" id="projects" aria-labelledby="projects-title">
+        <div class="main-container">
+          <div class="section-heading reveal-target">
+            <div>
+              <span class="section-index">01 / Selected work</span>
+              <h2 id="projects-title">Systems built to matter.</h2>
+            </div>
+            <p>
+              A focused selection spanning surgical robotics, embedded medical devices,
+              and applied machine learning.
             </p>
           </div>
-        </div>
 
-        <div class="main-footer__lower">
-          &copy; Copyright 2021. Made by
-          <a rel="noreferrer" target="_blank" href="https://veysiadn.github.io"
-            >Veysi ADIN</a
-          >
+          <div class="project-filter reveal-target" role="toolbar" aria-label="Filter projects">
+            <button class="is-active" type="button" data-filter="all" aria-pressed="true">All work</button>
+            <button type="button" data-filter="robotics" aria-pressed="false">Robotics</button>
+            <button type="button" data-filter="medical" aria-pressed="false">Medical</button>
+            <button type="button" data-filter="ai" aria-pressed="false">AI</button>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card project-card--featured reveal-target" data-categories="robotics medical">
+              <div class="project-card__media">
+                <img
+                  src="./assets/jpeg/Experimental_Setup.jpg"
+                  alt="Spine surgery robot, embedded controller, and monitor in the laboratory"
+                />
+                <span class="project-card__number">01</span>
+              </div>
+              <div class="project-card__body">
+                <div class="project-card__meta">
+                  <span>Medical robotics</span>
+                  <span>Control framework</span>
+                </div>
+                <h3><a href="./ssr_control_framework.html">Spine Surgery Robot</a></h3>
+                <p>
+                  A real-time control framework connecting EtherCAT motion, ROS 2 nodes,
+                  safety I/O, and a Qt operator interface.
+                </p>
+                <ul class="project-card__stack" aria-label="Technologies used">
+                  <li>C++</li><li>ROS 2</li><li>EtherCAT</li><li>RT Linux</li>
+                </ul>
+                <a class="project-card__action" href="./ssr_control_framework.html" aria-label="View Spine Surgery Robot case study">
+                  View case study
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card reveal-target" data-categories="medical">
+              <div class="project-card__media">
+                <img
+                  src="./assets/jpeg/Product.jpg"
+                  alt="FlexDeb microdebrider controller, handpiece, and foot controls"
+                  loading="lazy"
+                />
+                <span class="project-card__number">02</span>
+              </div>
+              <div class="project-card__body">
+                <div class="project-card__meta"><span>Medical device</span><span>Embedded control</span></div>
+                <h3><a href="./microdebrider_controller.html">Microdebrider Controller</a></h3>
+                <p>Control software for a compact surgical platform with motor, pump, touchscreen, and safety logic.</p>
+                <ul class="project-card__stack" aria-label="Technologies used">
+                  <li>C++</li><li>Qt</li><li>Motor control</li>
+                </ul>
+                <a class="project-card__action" href="./microdebrider_controller.html" aria-label="View Microdebrider Controller case study">
+                  View case study
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                </a>
+              </div>
+            </article>
+
+            <article class="project-card reveal-target" data-categories="medical ai">
+              <div class="project-card__media project-card__media--contain">
+                <img
+                  src="./assets/jpeg/PredictionPart.png"
+                  alt="Web interface predicting a retinal disease level from an uploaded image"
+                  loading="lazy"
+                />
+                <span class="project-card__number">03</span>
+              </div>
+              <div class="project-card__body">
+                <div class="project-card__meta"><span>Applied AI</span><span>Web application</span></div>
+                <h3><a href="./diagnosis_assistant.html">Diagnosis Assistant</a></h3>
+                <p>A collaborative prototype that applies image classification to support retinal disease assessment.</p>
+                <ul class="project-card__stack" aria-label="Technologies used">
+                  <li>Python</li><li>PyTorch</li><li>ONNX</li>
+                </ul>
+                <a class="project-card__action" href="./diagnosis_assistant.html" aria-label="View Diagnosis Assistant case study">
+                  View case study
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+                </a>
+              </div>
+            </article>
+          </div>
         </div>
+      </section>
+
+      <section class="about section" id="about" aria-labelledby="about-title">
+        <div class="main-container about__layout">
+          <div class="about__portrait reveal-target">
+            <div class="about__portrait-frame">
+              <img src="./assets/png/veysiadn.png" alt="Veysi ADIN" loading="lazy" />
+              <span class="about__portrait-label">Engineer / Builder / Teammate</span>
+            </div>
+          </div>
+
+          <div class="about__content reveal-target">
+            <span class="section-index">02 / About</span>
+            <h2 id="about-title">Close to the hardware.<br />Clear about the human.</h2>
+            <p class="about__lead">
+              I am an embedded systems engineer in Malm&ouml;, working across the layers
+              that make physical products dependable: electronics, real-time software,
+              communication, control, and operator experience.
+            </p>
+            <p>
+              My background in robotics and control software has taken me through surgical
+              robots, medical devices, and consumer electronics. I care about robust behavior,
+              readable systems, and the details that help a team ship with confidence.
+            </p>
+            <blockquote>
+              <span>Working principle</span>
+              &ldquo;Know thyself and nothing in excess.&rdquo;
+            </blockquote>
+            <a href="./assets/pdf/CV_Veysi_ADIN.pdf" class="text-link" target="_blank" rel="noreferrer">
+              Read the full curriculum vitae
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"></path></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="toolkit section" id="toolkit" aria-labelledby="toolkit-title">
+        <div class="main-container">
+          <div class="section-heading section-heading--compact reveal-target">
+            <div>
+              <span class="section-index">03 / Toolkit</span>
+              <h2 id="toolkit-title">From registers to robots.</h2>
+            </div>
+            <p>Four engineering layers, treated as one connected system.</p>
+          </div>
+
+          <div class="capability-grid">
+            <article class="capability reveal-target">
+              <span class="capability__index">A</span>
+              <h3>Embedded software</h3>
+              <p>Maintainable firmware and application code designed around real hardware constraints.</p>
+              <ul><li>C / C++</li><li>Python</li><li>STM32</li><li>Git</li></ul>
+            </article>
+            <article class="capability reveal-target">
+              <span class="capability__index">B</span>
+              <h3>Real-time control</h3>
+              <p>Deterministic motion and feedback paths for systems where timing is part of correctness.</p>
+              <ul><li>RT Linux</li><li>EtherCAT</li><li>CiA 402</li><li>Motor control</li></ul>
+            </article>
+            <article class="capability reveal-target">
+              <span class="capability__index">C</span>
+              <h3>Robotics systems</h3>
+              <p>Integration across kinematics, middleware, sensors, actuators, and safety behavior.</p>
+              <ul><li>ROS / ROS 2</li><li>MATLAB</li><li>Octave</li><li>Medical robotics</li></ul>
+            </article>
+            <article class="capability reveal-target">
+              <span class="capability__index">D</span>
+              <h3>Human interface</h3>
+              <p>Practical operator tools that expose system state and keep critical actions unambiguous.</p>
+              <ul><li>Qt</li><li>Diagnostics</li><li>Safety I/O</li><li>System testing</li></ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="journey section" id="journey" aria-labelledby="journey-title">
+        <div class="main-container journey__layout">
+          <div class="journey__heading reveal-target">
+            <span class="section-index">04 / Journey</span>
+            <h2 id="journey-title">Built by following the whole signal path.</h2>
+          </div>
+          <div class="timeline">
+            <article class="timeline__item reveal-target">
+              <span>Current focus</span>
+              <div>
+                <h3>Embedded systems engineering</h3>
+                <p>Malm&ouml;, Sweden</p>
+              </div>
+              <p>Developing and testing dependable software for embedded products and connected hardware.</p>
+            </article>
+            <article class="timeline__item reveal-target">
+              <span>Graduate work</span>
+              <div>
+                <h3>Robotics and control software</h3>
+                <p>Korea Institute of Science and Technology</p>
+              </div>
+              <p>Integrated real-time Linux, EtherCAT, ROS 2, and Qt for a spine surgery robot platform.</p>
+            </article>
+            <article class="timeline__item reveal-target">
+              <span>Foundation</span>
+              <div>
+                <h3>Electrical and electronics engineering</h3>
+                <p>Mersin University</p>
+              </div>
+              <p>Graduated as Engineering Faculty valedictorian and kept building at the boundary of circuits and code.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="collaboration section" id="team" aria-labelledby="team-title">
+        <div class="collaboration__media reveal-target">
+          <img src="./assets/jpeg/LabTeam.JPG" alt="Veysi ADIN with the spine surgery robot development team" loading="lazy" />
+        </div>
+        <div class="main-container collaboration__content reveal-target">
+          <span class="section-index">Built with teams</span>
+          <h2 id="team-title">Serious systems are a team sport.</h2>
+          <p>
+            The best engineering happens when software, hardware, research, and clinical
+            perspectives stay in the same conversation.
+          </p>
+          <a href="./ssr_control_framework.html" class="btn btn--light">Meet the work</a>
+        </div>
+      </section>
+
+      <section class="awards section" id="awards" aria-labelledby="awards-title">
+        <div class="main-container">
+          <div class="section-heading reveal-target">
+            <div>
+              <span class="section-index">05 / Recognition</span>
+              <h2 id="awards-title">Ideas that traveled further.</h2>
+            </div>
+            <p>Milestones shared with mentors, collaborators, and teammates.</p>
+          </div>
+
+          <div class="recognition-list">
+            <a
+              class="recognition-item reveal-target"
+              href="https://www.youtube.com/watch?v=UaHLfNDjBoc"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="recognition-item__year">KIST School</span>
+              <img src="./assets/jpeg/kiri-award-photo.JPG" alt="Kiri-Lab competition award presentation" loading="lazy" />
+              <span class="recognition-item__copy">
+                <strong>Kiri-Lab Idea Bubbling Competition</strong>
+                <small>Encouragement award for a real-time EtherCAT master on Raspberry Pi</small>
+              </span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"></path></svg>
+            </a>
+            <a class="recognition-item reveal-target" href="./diagnosis_assistant.html">
+              <span class="recognition-item__year">Daewoong</span>
+              <img src="./assets/jpeg/DiagnosisAssistantTeam.JPG" alt="Diagnosis Assistant team" loading="lazy" />
+              <span class="recognition-item__copy">
+                <strong>Foundation Hackathon</strong>
+                <small>AI-based diagnosis assistant developed as a multidisciplinary team</small>
+              </span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"></path></svg>
+            </a>
+            <a
+              class="recognition-item reveal-target"
+              href="http://www.mersin.edu.tr/haberler/352971/genc-muhendisler-mezun-oldu"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="recognition-item__year">Mersin</span>
+              <img src="./assets/jpeg/Graduation Talk.jpg" alt="Veysi ADIN giving the engineering commencement speech" loading="lazy" />
+              <span class="recognition-item__copy">
+                <strong>Engineering Faculty Valedictorian</strong>
+                <small>Commencement speaker at Mersin University</small>
+              </span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"></path></svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact section" id="contact" aria-labelledby="contact-title">
+        <div class="main-container contact__layout">
+          <div class="contact__copy reveal-target">
+            <span class="section-index">06 / Contact</span>
+            <h2 id="contact-title">Have a system that needs to move with intent?</h2>
+          </div>
+          <div class="contact__actions reveal-target">
+            <p>
+              I am always interested in thoughtful embedded, robotics, and medical-device work.
+            </p>
+            <a class="btn btn--light" href="https://www.linkedin.com/in/veysiadn/" target="_blank" rel="noreferrer">
+              Start a conversation
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"></path></svg>
+            </a>
+            <a class="contact__github" href="https://github.com/veysiadn" target="_blank" rel="noreferrer">
+              Or explore the code on GitHub
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="main-footer">
+      <div class="main-container main-footer__layout">
+        <a class="main-footer__brand" href="#home" aria-label="Back to top">
+          <span>VA</span>
+          <strong>Veysi ADIN</strong>
+        </a>
+        <p>Embedded software / Robotics / Medical devices</p>
+        <div class="main-footer__links">
+          <a href="https://www.linkedin.com/in/veysiadn/" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://github.com/veysiadn" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://www.instagram.com/veysiadn/" target="_blank" rel="noreferrer">Instagram</a>
+        </div>
+        <small>&copy; <span data-current-year>2026</span> Veysi ADIN</small>
       </div>
     </footer>
+
+    <button class="back-to-top" type="button" aria-label="Back to top" title="Back to top">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20V4M6 10l6-6 6 6"></path></svg>
+    </button>
 
     <script src="./index.js"></script>
   </body>
