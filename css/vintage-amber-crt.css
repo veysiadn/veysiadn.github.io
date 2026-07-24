@@ -577,6 +577,7 @@
 .home-page .projects,
 .home-page .toolkit,
 .home-page .journey,
+.home-page .research,
 .home-page .awards,
 .case-study-page .project-details {
   background: var(--crt-bg);
@@ -784,6 +785,53 @@
   color: var(--crt-hot);
   font-family: 'VT323', monospace;
   font-size: 2.6rem;
+}
+
+.publication-list,
+.publication-item,
+.open-source,
+.open-source__list,
+.open-source__list a {
+  border-color: var(--crt-line);
+}
+
+.publication-item__year,
+.publication-item__copy > span,
+.open-source__list a > span {
+  color: var(--crt-secondary);
+}
+
+.publication-item__copy h3,
+.open-source h3,
+.open-source__list strong {
+  color: var(--crt-hot);
+  font-family: 'VT323', monospace;
+  text-transform: uppercase;
+}
+
+.publication-item__copy h3 {
+  font-size: 2.7rem;
+}
+
+.publication-item__copy p,
+.open-source__list small {
+  color: var(--crt-dim);
+}
+
+.publication-item__action,
+.open-source__list a,
+.research__profile-links a {
+  color: var(--crt-main);
+}
+
+.publication-item__action:hover,
+.open-source__list a:hover strong,
+.research__profile-links a:hover {
+  color: var(--crt-secondary);
+}
+
+.research__profile-links a {
+  border-color: currentColor;
 }
 
 .home-page .collaboration {

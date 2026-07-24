@@ -6,17 +6,18 @@
     <meta name="theme-color" content="#101210" id="theme-color-meta" />
     <meta
       name="description"
-      content="Veysi ADIN is an embedded software engineer building dependable robotics, medical devices, and real-time control systems."
+      content="Veysi ADIN is an embedded software engineer working across automotive platforms, real-time robotics, medical devices, and TinyML."
     />
     <meta property="og:title" content="Veysi ADIN | Embedded Software Engineer" />
     <meta
       property="og:description"
-      content="Robotics, medical devices, and real-time control systems engineered from hardware to interface."
+      content="Embedded software from vehicle platforms and STM32 firmware to medical robotics and TinyML."
     />
     <meta property="og:type" content="website" />
     <meta property="og:image" content="./assets/jpeg/ExperimentalSetup.png" />
     <title>Veysi ADIN | Embedded Software Engineer</title>
 
+    <link rel="canonical" href="https://veysiadn.github.io/" />
     <link rel="icon" href="./assets/jpeg/va_logo_resized.jpg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -33,6 +34,40 @@
         document.documentElement.dataset.theme = savedTheme || systemTheme
       } catch (error) {
         document.documentElement.dataset.theme = 'light'
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Veysi ADIN",
+        "url": "https://veysiadn.github.io/",
+        "image": "https://veysiadn.github.io/assets/png/veysiadn.png",
+        "jobTitle": "Embedded Software Engineer",
+        "worksFor": {
+          "@type": "Organization",
+          "name": "Sigma Connectivity Engineering AB"
+        },
+        "affiliation": {
+          "@type": "CollegeOrUniversity",
+          "name": "Mid Sweden University"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/veysiadn/",
+          "https://github.com/veysiadn",
+          "https://orcid.org/0000-0002-8250-5066",
+          "https://scholar.google.com/citations?user=AkC6UxMAAAAJ&hl=en",
+          "https://ieeexplore.ieee.org/author/37089908168"
+        ],
+        "knowsAbout": [
+          "Embedded software",
+          "Automotive software integration",
+          "Real-time Linux",
+          "EtherCAT",
+          "Robotics",
+          "TinyML",
+          "STM32"
+        ]
       }
     </script>
     <link rel="stylesheet" href="css/modern.css" />
@@ -65,7 +100,7 @@
             <li><a href="#about" class="header__link">About</a></li>
             <li><a href="#toolkit" class="header__link">Toolkit</a></li>
             <li><a href="#journey" class="header__link">Journey</a></li>
-            <li><a href="#awards" class="header__link">Recognition</a></li>
+            <li><a href="#research" class="header__link">Research</a></li>
           </ul>
 
           <div class="header__actions">
@@ -118,6 +153,7 @@
           <li class="header__sm-menu-link"><a href="#about">About</a></li>
           <li class="header__sm-menu-link"><a href="#toolkit">Toolkit</a></li>
           <li class="header__sm-menu-link"><a href="#journey">Journey</a></li>
+          <li class="header__sm-menu-link"><a href="#research">Research</a></li>
           <li class="header__sm-menu-link"><a href="#awards">Recognition</a></li>
           <li class="header__sm-menu-link"><a href="#contact">Contact</a></li>
         </ul>
@@ -152,11 +188,17 @@
         <button type="button" data-command="#toolkit" data-search="skills toolkit c++ python ros ethercat">
           <span>03</span><strong>Engineering toolkit</strong><small>Capabilities</small>
         </button>
+        <button type="button" data-command="#journey" data-search="journey experience automotive volvo sigma kist education">
+          <span>04</span><strong>Experience and education</strong><small>Journey</small>
+        </button>
+        <button type="button" data-command="#research" data-search="research publications papers scholar orcid github open source tinyml">
+          <span>05</span><strong>Research and open source</strong><small>Public record</small>
+        </button>
         <button type="button" data-command="#awards" data-search="awards recognition team achievements">
-          <span>04</span><strong>Recognition</strong><small>Awards</small>
+          <span>06</span><strong>Recognition</strong><small>Awards</small>
         </button>
         <button type="button" data-command="#contact" data-search="contact linkedin github connect">
-          <span>05</span><strong>Start a conversation</strong><small>Contact</small>
+          <span>07</span><strong>Start a conversation</strong><small>Contact</small>
         </button>
       </div>
       <p class="command-menu__empty" hidden>No matching destination.</p>
@@ -182,8 +224,8 @@
               Veysi <span>ADIN</span>
             </h1>
             <p class="home-hero__statement">
-              I build dependable systems where <strong>code meets motion</strong>.
-              Robotics, medical devices, and real-time control from hardware to interface.
+              I build dependable software where <strong>hardware, timing, and product behavior meet</strong>.
+              From vehicle platforms and STM32 firmware to medical robotics and TinyML.
             </p>
             <div class="home-hero__cta">
               <a href="#projects" class="btn btn--primary">
@@ -199,12 +241,12 @@
 
           <dl class="home-hero__facts">
             <div>
-              <dt>Focus</dt>
-              <dd>Medical robotics</dd>
+              <dt>Industry</dt>
+              <dd>EV software platforms</dd>
             </div>
             <div>
-              <dt>Core</dt>
-              <dd>C / C++ / Python</dd>
+              <dt>Research</dt>
+              <dd>TinyML on MCUs</dd>
             </div>
             <div>
               <dt>Local time</dt>
@@ -216,6 +258,7 @@
         <div class="home-hero__socials" aria-label="Social profiles">
           <a href="https://www.linkedin.com/in/veysiadn/" target="_blank" rel="noreferrer">LinkedIn</a>
           <a href="https://github.com/veysiadn" target="_blank" rel="noreferrer">GitHub</a>
+          <a href="https://scholar.google.com/citations?user=AkC6UxMAAAAJ&hl=en" target="_blank" rel="noreferrer">Scholar</a>
           <a href="https://www.youtube.com/channel/UC_gTbsnIiPLEvORoNSgZIcA" target="_blank" rel="noreferrer">YouTube</a>
         </div>
 
@@ -227,20 +270,20 @@
 
       <div class="signal-strip" aria-label="Core technologies">
         <div class="signal-strip__track">
-          <span>C++</span><i aria-hidden="true"></i>
-          <span>ROS 2</span><i aria-hidden="true"></i>
-          <span>EtherCAT</span><i aria-hidden="true"></i>
-          <span>Real-time Linux</span><i aria-hidden="true"></i>
-          <span>Qt</span><i aria-hidden="true"></i>
+          <span>C / C++</span><i aria-hidden="true"></i>
+          <span>Automotive integration</span><i aria-hidden="true"></i>
+          <span>Embedded Linux</span><i aria-hidden="true"></i>
           <span>STM32</span><i aria-hidden="true"></i>
-          <span>Motor control</span><i aria-hidden="true"></i>
-          <span aria-hidden="true">C++</span><i aria-hidden="true"></i>
-          <span aria-hidden="true">ROS 2</span><i aria-hidden="true"></i>
-          <span aria-hidden="true">EtherCAT</span><i aria-hidden="true"></i>
-          <span aria-hidden="true">Real-time Linux</span><i aria-hidden="true"></i>
-          <span aria-hidden="true">Qt</span><i aria-hidden="true"></i>
+          <span>EtherCAT</span><i aria-hidden="true"></i>
+          <span>ROS 2</span><i aria-hidden="true"></i>
+          <span>TinyML</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">C / C++</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">Automotive integration</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">Embedded Linux</span><i aria-hidden="true"></i>
           <span aria-hidden="true">STM32</span><i aria-hidden="true"></i>
-          <span aria-hidden="true">Motor control</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">EtherCAT</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">ROS 2</span><i aria-hidden="true"></i>
+          <span aria-hidden="true">TinyML</span><i aria-hidden="true"></i>
         </div>
       </div>
 
@@ -355,14 +398,15 @@
             <span class="section-index">02 / About</span>
             <h2 id="about-title">Close to the hardware.<br />Clear about the human.</h2>
             <p class="about__lead">
-              I am an embedded systems engineer in Malm&ouml;, working across the layers
-              that make physical products dependable: electronics, real-time software,
-              communication, control, and operator experience.
+              I am an embedded software engineer based in Malm&ouml;, working with
+              Sigma Connectivity Engineering AB and consulting Volvo Cars on core
+              integration for a new generation software platform for fully electric vehicles.
             </p>
             <p>
-              My background in robotics and control software has taken me through surgical
-              robots, medical devices, and consumer electronics. I care about robust behavior,
-              readable systems, and the details that help a team ship with confidence.
+              Before automotive, I developed firmware and medical-device control software
+              and worked in robotics research. My MSc in AI and Robotics and doctoral work
+              at Mid Sweden University connect embedded systems with TinyML, sensor
+              processing, and real-time control.
             </p>
             <blockquote>
               <span>Working principle</span>
@@ -389,27 +433,27 @@
           <div class="capability-grid">
             <article class="capability reveal-target">
               <span class="capability__index">A</span>
-              <h3>Embedded software</h3>
-              <p>Maintainable firmware and application code designed around real hardware constraints.</p>
-              <ul><li>C / C++</li><li>Python</li><li>STM32</li><li>Git</li></ul>
+              <h3>Product embedded software</h3>
+              <p>Firmware, drivers, and application code designed around real hardware and delivery constraints.</p>
+              <ul><li>C / C++</li><li>Python</li><li>STM32</li><li>CI / CD</li></ul>
             </article>
             <article class="capability reveal-target">
               <span class="capability__index">B</span>
-              <h3>Real-time control</h3>
-              <p>Deterministic motion and feedback paths for systems where timing is part of correctness.</p>
-              <ul><li>RT Linux</li><li>EtherCAT</li><li>CiA 402</li><li>Motor control</li></ul>
+              <h3>Platform integration</h3>
+              <p>Software integration and testing across embedded Linux, connected hardware, and vehicle platforms.</p>
+              <ul><li>Automotive</li><li>Embedded Linux</li><li>Integration</li><li>Git</li></ul>
             </article>
             <article class="capability reveal-target">
               <span class="capability__index">C</span>
-              <h3>Robotics systems</h3>
-              <p>Integration across kinematics, middleware, sensors, actuators, and safety behavior.</p>
-              <ul><li>ROS / ROS 2</li><li>MATLAB</li><li>Octave</li><li>Medical robotics</li></ul>
+              <h3>Real-time and robotics</h3>
+              <p>Deterministic communication, motion, sensing, and safety paths for physical systems.</p>
+              <ul><li>RT Linux</li><li>EtherCAT</li><li>ROS 2</li><li>CiA 402</li></ul>
             </article>
             <article class="capability reveal-target">
               <span class="capability__index">D</span>
-              <h3>Human interface</h3>
-              <p>Practical operator tools that expose system state and keep critical actions unambiguous.</p>
-              <ul><li>Qt</li><li>Diagnostics</li><li>Safety I/O</li><li>System testing</li></ul>
+              <h3>Edge intelligence</h3>
+              <p>Compact models and signal pipelines deployed to constrained microcontrollers for real-time inference.</p>
+              <ul><li>TinyML</li><li>TensorFlow Lite</li><li>Sensor signals</li><li>Model deployment</li></ul>
             </article>
           </div>
         </div>
@@ -423,29 +467,153 @@
           </div>
           <div class="timeline">
             <article class="timeline__item reveal-target">
-              <span>Current focus</span>
+              <span>2024 / Present</span>
               <div>
-                <h3>Embedded systems engineering</h3>
-                <p>Malm&ouml;, Sweden</p>
+                <h3>Embedded software consultant</h3>
+                <p>Sigma Connectivity Engineering AB / Volvo Cars</p>
               </div>
-              <p>Developing and testing dependable software for embedded products and connected hardware.</p>
+              <p>Contributing to core integration of a new generation software platform for fully electric vehicles.</p>
             </article>
             <article class="timeline__item reveal-target">
-              <span>Graduate work</span>
+              <span>2022 / Present</span>
               <div>
-                <h3>Robotics and control software</h3>
-                <p>Korea Institute of Science and Technology</p>
+                <h3>Doctoral research in embedded machine learning</h3>
+                <p>Mid Sweden University</p>
               </div>
-              <p>Integrated real-time Linux, EtherCAT, ROS 2, and Qt for a spine surgery robot platform.</p>
+              <p>Researching TinyML for resource-constrained systems, with models deployed to microcontrollers for real-time sensing.</p>
             </article>
             <article class="timeline__item reveal-target">
-              <span>Foundation</span>
+              <span>2023</span>
+              <div>
+                <h3>Firmware and applied research</h3>
+                <p>Epitome / ETH Z&uuml;rich</p>
+              </div>
+              <p>Developed and tested STM32 peripheral drivers while contributing to low-cost embedded sensing research.</p>
+            </article>
+            <article class="timeline__item reveal-target">
+              <span>2020 / 2022</span>
+              <div>
+                <h3>Medical robotics and device software</h3>
+                <p>KIST / University of Science and Technology / Medicaretec</p>
+              </div>
+              <p>Built real-time EtherCAT and ROS 2 control software for a spine robot and embedded control for a surgical microdebrider.</p>
+            </article>
+            <article class="timeline__item reveal-target">
+              <span>2015 / 2019</span>
               <div>
                 <h3>Electrical and electronics engineering</h3>
                 <p>Mersin University</p>
               </div>
               <p>Graduated as Engineering Faculty valedictorian and kept building at the boundary of circuits and code.</p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="research section" id="research" aria-labelledby="research-title">
+        <div class="main-container">
+          <div class="section-heading reveal-target">
+            <div>
+              <span class="section-index">05 / Research &amp; open source</span>
+              <h2 id="research-title">Measured, published, shared.</h2>
+            </div>
+            <p>
+              Eight indexed works span TinyML, embedded sensing, medical instruments,
+              and robotic control, supported by public code and implementation guides.
+            </p>
+          </div>
+
+          <div class="research__layout">
+            <div class="publication-list" aria-label="Selected publications">
+              <article class="publication-item reveal-target">
+                <span class="publication-item__year">2026</span>
+                <div class="publication-item__copy">
+                  <span>IEEE AAIML</span>
+                  <h3>Real-Time Performance Prediction Using Tiny Machine Learning in Advanced Catalytic Systems</h3>
+                  <p>TinyML for real-time catalyst monitoring, compressed for ESP32-S3 and Arduino Nano 33 BLE targets.</p>
+                </div>
+                <a class="publication-item__action" href="https://doi.org/10.1109/AAIML67890.2026.11498220" target="_blank" rel="noreferrer" aria-label="Open the 2026 TinyML catalytic systems paper">
+                  DOI
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"></path></svg>
+                </a>
+              </article>
+              <article class="publication-item reveal-target">
+                <span class="publication-item__year">2024</span>
+                <div class="publication-item__copy">
+                  <span>IEEE Transactions on Instrumentation and Measurement</span>
+                  <h3>On-Device Feeding Behavior Analysis of Grazing Cattle</h3>
+                  <p>Low-power acoustic behavior analysis deployed to resource-constrained embedded devices for field monitoring.</p>
+                </div>
+                <a class="publication-item__action" href="https://doi.org/10.1109/TIM.2024.3376013" target="_blank" rel="noreferrer" aria-label="Open the on-device feeding behavior paper">
+                  DOI
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"></path></svg>
+                </a>
+              </article>
+              <article class="publication-item reveal-target">
+                <span class="publication-item__year">2024</span>
+                <div class="publication-item__copy">
+                  <span>Minimally Invasive Therapy &amp; Allied Technologies</span>
+                  <h3>Camera Sheath With Transformable Head for Minimally Invasive Surgical Instruments</h3>
+                  <p>A transformable camera sheath that provides a localized view of the surgical instrument tip.</p>
+                </div>
+                <a class="publication-item__action" href="https://doi.org/10.1080/13645706.2024.2335540" target="_blank" rel="noreferrer" aria-label="Open the transformable camera sheath paper">
+                  DOI
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"></path></svg>
+                </a>
+              </article>
+              <article class="publication-item reveal-target">
+                <span class="publication-item__year">2023</span>
+                <div class="publication-item__copy">
+                  <span>IEEE Transactions on Instrumentation and Measurement</span>
+                  <h3>Leveraging Acoustic Emission and Machine Learning for Concrete Materials Damage Classification on Embedded Devices</h3>
+                  <p>Embedded machine learning for non-destructive damage classification from acoustic-emission signals.</p>
+                </div>
+                <a class="publication-item__action" href="https://doi.org/10.1109/TIM.2023.3307751" target="_blank" rel="noreferrer" aria-label="Open the acoustic-emission damage classification paper">
+                  DOI
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"></path></svg>
+                </a>
+              </article>
+              <article class="publication-item reveal-target">
+                <span class="publication-item__year">2023</span>
+                <div class="publication-item__copy">
+                  <span>IEEE Sensors Applications Symposium</span>
+                  <h3>Tiny Machine Learning for Real-Time Postural Stability Analysis</h3>
+                  <p>Lightweight postural-stability models deployed to an ARM Cortex-M4 microcontroller.</p>
+                </div>
+                <a class="publication-item__action" href="https://doi.org/10.1109/SAS58821.2023.10254126" target="_blank" rel="noreferrer" aria-label="Open the postural stability TinyML paper">
+                  DOI
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M7 7h10v10"></path></svg>
+                </a>
+              </article>
+            </div>
+
+            <aside class="open-source reveal-target" aria-labelledby="open-source-title">
+              <span class="section-index">Public engineering record</span>
+              <h3 id="open-source-title">Open-source work</h3>
+              <div class="open-source__list">
+                <a href="https://github.com/veysiadn/IgHEtherCATImplementation" target="_blank" rel="noreferrer">
+                  <span>Guide / Real-time Linux</span>
+                  <strong>IgH EtherCAT Master</strong>
+                  <small>Installation and implementation guide for real-time EtherCAT systems.</small>
+                </a>
+                <a href="https://github.com/veysiadn/TMC2209_STM32" target="_blank" rel="noreferrer">
+                  <span>Driver / C</span>
+                  <strong>TMC2209 for STM32</strong>
+                  <small>UART and STEP/DIR motor-control driver with an adaptable HAL boundary.</small>
+                </a>
+                <a href="https://github.com/veysiadn/ecat_control_ws" target="_blank" rel="noreferrer">
+                  <span>Framework / C++</span>
+                  <strong>ROS 2 + EtherCAT control</strong>
+                  <small>Real-time communication, control, GUI, and safety nodes for robotic systems.</small>
+                </a>
+              </div>
+              <nav class="research__profile-links" aria-label="Research profiles">
+                <a href="https://scholar.google.com/citations?user=AkC6UxMAAAAJ&hl=en" target="_blank" rel="noreferrer">Google Scholar</a>
+                <a href="https://orcid.org/0000-0002-8250-5066" target="_blank" rel="noreferrer">ORCID</a>
+                <a href="https://ieeexplore.ieee.org/author/37089908168" target="_blank" rel="noreferrer">IEEE profile</a>
+                <a href="https://github.com/veysiadn" target="_blank" rel="noreferrer">All repositories</a>
+              </nav>
+            </aside>
           </div>
         </div>
       </section>
@@ -469,7 +637,7 @@
         <div class="main-container">
           <div class="section-heading reveal-target">
             <div>
-              <span class="section-index">05 / Recognition</span>
+              <span class="section-index">06 / Recognition</span>
               <h2 id="awards-title">Ideas that traveled further.</h2>
             </div>
             <p>Milestones shared with mentors, collaborators, and teammates.</p>
@@ -520,12 +688,13 @@
       <section class="contact section" id="contact" aria-labelledby="contact-title">
         <div class="main-container contact__layout">
           <div class="contact__copy reveal-target">
-            <span class="section-index">06 / Contact</span>
+            <span class="section-index">07 / Contact</span>
             <h2 id="contact-title">Have a system that needs to move with intent?</h2>
           </div>
           <div class="contact__actions reveal-target">
             <p>
-              I am always interested in thoughtful embedded, robotics, and medical-device work.
+              I am always interested in thoughtful embedded, automotive, robotics,
+              and medical-device work.
             </p>
             <a class="btn btn--light" href="https://www.linkedin.com/in/veysiadn/" target="_blank" rel="noreferrer">
               Start a conversation
@@ -545,7 +714,7 @@
           <span>VA</span>
           <strong>Veysi ADIN</strong>
         </a>
-        <p>Embedded software / Robotics / Medical devices</p>
+        <p>Embedded software / Automotive / Robotics / TinyML</p>
         <div class="main-footer__links">
           <a href="https://www.linkedin.com/in/veysiadn/" target="_blank" rel="noreferrer">LinkedIn</a>
           <a href="https://github.com/veysiadn" target="_blank" rel="noreferrer">GitHub</a>
