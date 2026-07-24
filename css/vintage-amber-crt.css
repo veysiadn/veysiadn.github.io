@@ -532,6 +532,7 @@
 }
 
 .section-index,
+.contact__copy .section-index,
 .project-details__header span {
   color: var(--crt-secondary);
   font-size: 1rem;
